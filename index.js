@@ -12,7 +12,7 @@ const app = express()
 dotenv.config()
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://ashutoshquill.netlify.app",
     credentials: true
 }))
 app.use(cookieParser())
