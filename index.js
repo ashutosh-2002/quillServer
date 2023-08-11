@@ -20,20 +20,6 @@ app.set("trust proxy", 1)
 app.use(bodyParser.json({ limit: "30mb" }))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//         cb(null, '../client/public/upload')
-//     },
-//     filename: function (req, file, cb) {
-//         cb(null, Date.now() + file.originalname)
-//     }
-// })
-// const upload = multer({ storage })
-// app.post('/api/upload', upload.single('file'), function (req, res) {
-//     const file = req.file;
-//     res.status(200).json(file?.filename)
-// })
-
 app.use("/api/auth", authRoutes)
 app.use("/api/posts", postRoutes)
 app.use("/api/users", usersRoutes)
